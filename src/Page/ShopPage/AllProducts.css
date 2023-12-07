@@ -7,12 +7,9 @@
     font-family: 'Montserrat', sans-serif
 }
 
-/* body {
-    background-color: bisque
-} */
 
 .container {
-    margin: 30px auto
+    margin: 10px auto;
 }
 
 .navbar-nav .nav-link {

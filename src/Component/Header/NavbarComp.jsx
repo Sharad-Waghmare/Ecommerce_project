@@ -20,22 +20,14 @@ function NavbarComp() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand to="#home">Shop</Navbar.Brand>
+        <Navbar.Brand to="#home">Hexashop</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <NavLink className="nav-link" to="/">Home</NavLink>
-            {/* <NavLink className="nav-link" to="/shop">Shop</NavLink> */}
-          
             <NavLink className="nav-link" to="/product">Product</NavLink>
-            {/* <NavLink className="nav-link" to="/contact">Contact</NavLink> */}
             <NavLink className="nav-link" to="/cart">< i className="fa-solid fa-cart-shopping m-2"></i> {cartData.result? cartData.result: ""}</NavLink>
           </Nav>
-          <div className='icons m-2'>
-         {/* <i className="fa-solid fa-heart m-2 "></i> */}
-          <Link to='/cart'></Link>
-          <i className="fa-solid fa-user m-2"></i>
-          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

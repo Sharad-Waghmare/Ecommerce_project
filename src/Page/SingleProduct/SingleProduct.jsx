@@ -29,7 +29,7 @@ const SingleProduct = () => {
     notify()
   }
 
-  const notify = () => toast(' Cart Item successfully!', {
+  const notify = () => toast.success('Cart item successfully!', {
     position: "top-right",
     autoClose: 5000,
     hideProgressBar: false,
@@ -37,8 +37,8 @@ const SingleProduct = () => {
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: "light",
-  });;
+    theme: "dark",
+  });
   return (
     <>
       <section>
@@ -57,8 +57,8 @@ const SingleProduct = () => {
             <div className="col-lg-7 mt-5">
               <div className="card">
                 <div className="card-body">
-                  <h1 className="h2">{data.data?.name}</h1>
-                  <p className="h3 py-2">$25.00</p>
+                  <h1 className="h2">Brand: {data.data?.name}</h1>
+                  <p className="h3 py-2">₹{data.data?.price}</p>
                   <p className="py-2">
                     <i className="fa fa-star text-warning"></i>
                     <i className="fa fa-star text-warning"></i>
@@ -69,10 +69,10 @@ const SingleProduct = () => {
                   </p>
                   <ul className="list-inline">
                     <li className="list-inline-item">
-                      <h6>Brand:</h6>
+                      {/* <h6>Brand:</h6> */}
                     </li>
                     <li className="list-inline-item">
-                      <p className="text-muted"><strong>Easy Wear</strong></p>
+                      {/* <p className="text-muted"><strong>Easy Wear</strong></p> */}
                     </li>
                   </ul>
                   <h6>Description:</h6>
@@ -97,8 +97,7 @@ const SingleProduct = () => {
                           pauseOnFocusLoss
                           draggable
                           pauseOnHover
-                          theme="light"
-                          
+                          theme="dark"
                         />
                         {/* Same as */}
                         <ToastContainer />

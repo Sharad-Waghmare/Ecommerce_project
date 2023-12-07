@@ -61,7 +61,7 @@ function AllProductsShop () {
                     <div class="tag bg-red">sale</div>
                     <div class="title pt-4 pb-1">{elem.name}</div>
                     <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
-                    <div class="price">{elem.price}</div>
+                    <div class="price">₹{elem.price}</div>
                 </div>
                 )
             })
