@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
-import { loadStripe } from '@stripe/stripe-js';
 import { useDispatch, useSelector } from 'react-redux'
 import { getCartsAll, removeFromCart, updateQuantity } from '../../Store/Cart/Action';
-import { Container, Card, Col, CardBody, Row } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import "./CartpageComp.css"
@@ -90,20 +88,7 @@ const CartpageComp = () => {
             </div>
             <div className="cart-summary">
               <Link to="/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  className="bi bi-arrow-left"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
-                  />
-                </svg>
-                <span>Continue Shopping</span>
+                <button className='clear-btn'>Continue Shopping</button>
               </Link>
               <div className="cart-checkout">
                 <div className="subtotal">
@@ -117,7 +102,6 @@ const CartpageComp = () => {
           </div>
         ) : (
           <div className='mt-4 text-center'>
-            {/* <h1 className='text-danger'>Your Cart is empty</h1> */}
             <ToastContainer
               position="top-center"
               autoClose={5000}

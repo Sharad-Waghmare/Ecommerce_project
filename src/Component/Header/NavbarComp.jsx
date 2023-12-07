@@ -16,7 +16,7 @@ function NavbarComp() {
   },[])
 
   const cartData = useSelector((state) => state.cart.carts)
-  // console.log(cartData.lenght);
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
